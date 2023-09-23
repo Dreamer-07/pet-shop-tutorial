@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "Frieda",
+    "name": "阿尔托莉雅",
     "picture": "images/scottish-terrier.jpeg",
     "age": 3,
     "breed": "Scottish Terrier",
@@ -9,7 +9,7 @@
   },
   {
     "id": 1,
-    "name": "Gina",
+    "name": "吉尔伽美什",
     "picture": "images/scottish-terrier.jpeg",
     "age": 3,
     "breed": "Scottish Terrier",
@@ -17,7 +17,7 @@
   },
   {
     "id": 2,
-    "name": "Collins",
+    "name": "库丘林",
     "picture": "images/french-bulldog.jpeg",
     "age": 2,
     "breed": "French Bulldog",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "name": "Melissa",
+    "name": "美杜莎",
     "picture": "images/boxer.jpeg",
     "age": 2,
     "breed": "Boxer",
@@ -33,7 +33,7 @@
   },
   {
     "id": 4,
-    "name": "Jeanine",
+    "name": "小太郎",
     "picture": "images/french-bulldog.jpeg",
     "age": 2,
     "breed": "French Bulldog",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "name": "Elvia",
+    "name": "C妈",
     "picture": "images/french-bulldog.jpeg",
     "age": 3,
     "breed": "French Bulldog",
@@ -49,7 +49,7 @@
   },
   {
     "id": 6,
-    "name": "Latisha",
+    "name": "赫拉克勒斯",
     "picture": "images/golden-retriever.jpeg",
     "age": 3,
     "breed": "Golden Retriever",
@@ -57,7 +57,7 @@
   },
   {
     "id": 7,
-    "name": "Coleman",
+    "name": "小贝",
     "picture": "images/golden-retriever.jpeg",
     "age": 3,
     "breed": "Golden Retriever",
@@ -65,7 +65,7 @@
   },
   {
     "id": 8,
-    "name": "Nichole",
+    "name": "伊什塔尔",
     "picture": "images/french-bulldog.jpeg",
     "age": 2,
     "breed": "French Bulldog",
@@ -73,7 +73,7 @@
   },
   {
     "id": 9,
-    "name": "Fran",
+    "name": "艾蕾",
     "picture": "images/boxer.jpeg",
     "age": 3,
     "breed": "Boxer",
@@ -81,7 +81,7 @@
   },
   {
     "id": 10,
-    "name": "Leonor",
+    "name": "牛若丸",
     "picture": "images/boxer.jpeg",
     "age": 2,
     "breed": "Boxer",
@@ -89,7 +89,7 @@
   },
   {
     "id": 11,
-    "name": "Dean",
+    "name": "李书文",
     "picture": "images/scottish-terrier.jpeg",
     "age": 3,
     "breed": "Scottish Terrier",
@@ -97,7 +97,7 @@
   },
   {
     "id": 12,
-    "name": "Stevenson",
+    "name": "C呆",
     "picture": "images/french-bulldog.jpeg",
     "age": 3,
     "breed": "French Bulldog",
@@ -105,7 +105,7 @@
   },
   {
     "id": 13,
-    "name": "Kristina",
+    "name": "两仪式",
     "picture": "images/golden-retriever.jpeg",
     "age": 4,
     "breed": "Golden Retriever",
@@ -113,7 +113,7 @@
   },
   {
     "id": 14,
-    "name": "Ethel",
+    "name": "水魔总",
     "picture": "images/golden-retriever.jpeg",
     "age": 2,
     "breed": "Golden Retriever",
@@ -121,7 +121,7 @@
   },
   {
     "id": 15,
-    "name": "Terry",
+    "name": "夏洛特",
     "picture": "images/golden-retriever.jpeg",
     "age": 2,
     "breed": "Golden Retriever",

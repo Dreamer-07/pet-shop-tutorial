@@ -2,13 +2,13 @@ App = {
   web3Provider: null,
   contracts: {},
 
-  init: async function() {
+  init: async function () {
     // Load pets.
-    $.getJSON('../pets.json', function(data) {
+    $.getJSON('../pets.json', function (data) {
       var petsRow = $('#petsRow');
       var petTemplate = $('#petTemplate');
 
-      for (i = 0; i < data.length; i ++) {
+      for (i = 0; i < data.length; i++) {
         petTemplate.find('.panel-title').text(data[i].name);
         petTemplate.find('img').attr('src', data[i].picture);
         petTemplate.find('.pet-breed').text(data[i].breed);
@@ -23,7 +23,7 @@ App = {
     return await App.initWeb3();
   },
 
-  initWeb3: async function() {
+  initWeb3: async function () {
     // Modern dapp browsers...
     if (window.ethereum) {
       App.web3Provider = window.ethereum;
@@ -48,8 +48,8 @@ App = {
     return App.initContract();
   },
 
-  initContract: function() {
-    $.getJSON('Adoption.json', function(data) {
+  initContract: function () {
+    $.getJSON('Valhalla.json', function (data) {
       // Get the necessary contract artifact file and instantiate it with truffle-contract
       var AdoptionArtifact = data;
       App.contracts.Adoption = TruffleContract(AdoptionArtifact);
@@ -64,50 +64,53 @@ App = {
     return App.bindEvents();
   },
 
-  bindEvents: function() {
+  bindEvents: function () {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
   },
 
-  markAdopted: function(adopters, account) {
+  markAdopted: function (adopters, account) {
     var adoptionInstance;
 
-    App.contracts.Adoption.deployed().then(function(instance) {
+    App.contracts.Adoption.deployed().then(function (instance) {
       adoptionInstance = instance;
 
-      return adoptionInstance.getAdopters.call();
-    }).then(function(adopters) {
+      return adoptionInstance.getServlets.call();
+    }).then(function (adopters) {
+      console.log("1111" + adopters);
       for (i = 0; i < adopters.length; i++) {
         if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
           $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
         }
       }
-    }).catch(function(err) {
+    }).catch(function (err) {
       console.log(err.message);
     });
   },
 
-  handleAdopt: function(event) {
+  handleAdopt: function (event) {
     event.preventDefault();
 
     var petId = parseInt($(event.target).data('id'));
 
     var adoptionInstance;
 
-    web3.eth.getAccounts(function(error, accounts) {
+    web3.eth.getAccounts(function (error, accounts) {
       if (error) {
         console.log(error);
       }
 
       var account = accounts[0];
 
-      App.contracts.Adoption.deployed().then(function(instance) {
+      App.contracts.Adoption.deployed().then(function (instance) {
         adoptionInstance = instance;
-
+        console.log("petId," + petId)
         // Execute adopt as a transaction by sending account
-        return adoptionInstance.adopt(petId, {from: account});
-      }).then(function(result) {
+        var res = adoptionInstance.call(petId, { from: account });
+        console.log(res)
+        return res;
+      }).then(function (result) {
         return App.markAdopted();
-      }).catch(function(err) {
+      }).catch(function (err) {
         console.log(err.message);
       });
     });
@@ -115,8 +118,8 @@ App = {
 
 };
 
-$(function() {
-  $(window).load(function() {
+$(function () {
+  $(window).load(function () {
     App.init();
   });
 });
